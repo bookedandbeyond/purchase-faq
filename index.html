@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Booked & Beyond — Purchasing & Product FAQ</title>
+<meta name="description" content="Frequently asked questions about purchasing, downloading, and using your Booked & Beyond Client Experience System.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Raleway:wght@300;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --slate:#2E2030;--cherry:#CC3860;--rose:#F4E2EC;--blush:#FCF8FA;
+  --slate-70:rgba(46,32,48,.7);--slate-45:rgba(46,32,48,.45);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',sans-serif;font-weight:400;background:var(--blush);color:var(--slate);line-height:1.6;font-size:16px}
+h1,h2,h3,.wordmark{font-family:'Raleway',sans-serif}
+a{color:var(--cherry);text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--cherry);outline-offset:3px;border-radius:2px}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px}
+
+/* top bar */
+.topbar{background:var(--blush);border-bottom:1px solid var(--rose);position:sticky;top:0;z-index:50}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:1060px}
+.lockup{display:flex;align-items:center;gap:14px;color:var(--slate)}
+.lockup:hover{text-decoration:none}
+.lockup .amp{font-family:'Raleway',sans-serif;font-weight:800;font-size:30px;color:var(--cherry);line-height:1}
+.lockup .bar{width:1px;height:30px;background:var(--slate-45)}
+.lockup .wordmark{font-weight:700;font-size:14px;letter-spacing:.28em}
+.lockup .wordmark .amp2{color:var(--cherry)}
+.topnav{display:flex;gap:22px;flex-wrap:wrap}
+.topnav a{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--slate);font-weight:500}
+.topnav a:hover{color:var(--cherry);text-decoration:none}
+@media(max-width:760px){.topnav{display:none}}
+
+/* hero */
+.hero{background:var(--slate);color:var(--rose);position:relative;overflow:hidden}
+.hero .bigamp{position:absolute;right:-60px;top:-130px;font-family:'Raleway',sans-serif;font-weight:800;
+  font-size:460px;line-height:1;color:rgba(204,56,96,.14);user-select:none;pointer-events:none}
+.hero .wrap{position:relative;padding:72px 24px 64px;max-width:860px}
+.eyebrow{font-size:11px;letter-spacing:.42em;text-transform:uppercase;color:rgba(244,226,236,.65);font-weight:500}
+.hero h1{color:#FCF8FA;font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:clamp(26px,4.5vw,44px);margin:16px 0 14px;line-height:1.2}
+.hero h1 .amp2{color:var(--cherry)}
+.hero p.lede{max-width:580px;color:rgba(244,226,236,.85);font-size:16px;font-weight:300}
+.rule{width:48px;height:3px;background:var(--cherry);margin-top:26px}
+
+/* category nav pills */
+.catnav{display:flex;flex-wrap:wrap;gap:8px;margin:40px 0 10px}
+.catnav a{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;letter-spacing:.04em;
+  background:#fff;border:1px solid var(--rose);border-radius:99px;padding:7px 16px;color:var(--slate);
+  transition:all .15s ease}
+.catnav a:hover{background:var(--cherry);color:#fff;border-color:var(--cherry);text-decoration:none}
+
+/* category sections */
+.category{margin-top:52px;scroll-margin-top:80px}
+.catlabel{font-size:11px;letter-spacing:.38em;text-transform:uppercase;color:var(--cherry);font-weight:600}
+.category h2{font-weight:700;letter-spacing:.04em;text-transform:uppercase;font-size:clamp(18px,2.5vw,24px);margin:6px 0 4px}
+.catrule{width:34px;height:2.5px;background:var(--cherry);margin:6px 0 20px}
+
+/* accordion FAQs */
+details.faq{background:#fff;border:1px solid var(--rose);border-radius:12px;margin-bottom:10px;overflow:hidden;
+  transition:box-shadow .15s ease}
+details.faq:hover{box-shadow:0 4px 16px rgba(46,32,48,.06)}
+details.faq summary{list-style:none;cursor:pointer;padding:18px 22px;display:flex;align-items:center;
+  gap:14px;font-weight:600;font-size:15.5px;line-height:1.35;color:var(--slate)}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary .chev{margin-left:auto;flex-shrink:0;font-size:12px;color:var(--cherry);transition:transform .2s}
+details.faq[open] summary .chev{transform:rotate(180deg)}
+details.faq[open] summary{border-bottom:1px solid var(--rose)}
+details.faq .answer{padding:16px 22px 20px;font-size:15px;color:var(--slate-70);line-height:1.6}
+details.faq .answer b{font-weight:600;color:var(--slate)}
+
+/* callout */
+.callout{background:var(--slate);color:var(--rose);border-radius:14px;padding:28px 30px;margin-top:56px}
+.callout h3{color:#FCF8FA;font-size:15px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:8px}
+.callout p{font-size:14.5px;font-weight:300;color:rgba(244,226,236,.85)}
+.callout a{color:var(--cherry)}
+
+/* footer */
+footer{background:var(--slate);color:rgba(244,226,236,.7);padding:48px 0;margin-top:64px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;max-width:1060px}
+footer .amp{font-family:'Raleway',sans-serif;font-weight:800;font-size:34px;color:var(--cherry)}
+footer p{font-size:13px;letter-spacing:.06em}
+footer a{color:var(--rose)}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap">
+<a class="lockup" href="https://bookedandbeyond.com" aria-label="Booked and Beyond home">
+  <span class="amp">&amp;</span><span class="bar"></span>
+  <span class="wordmark">BOOKED <span class="amp2">&amp;</span> BEYOND</span>
+</a>
+<nav class="topnav"><a href="https://bookedandbeyond.com">Shop</a><a href="#before-buying">Before buying</a><a href="#purchasing">Purchasing</a><a href="#whats-included">What's included</a><a href="#using-product">Using it</a><a href="#technical">Technical</a><a href="#contact">Support</a></nav>
+</div></header><div class="hero"><span class="bigamp" aria-hidden="true">&amp;</span><div class="wrap">
+<p class="eyebrow">Booked &amp; Beyond · Customer FAQ</p>
+<h1>Purchasing <span class="amp2">&amp;</span> Product FAQ</h1>
+<p class="lede">Everything you need to know before and after you buy: what is included, how to access your purchase, compatibility, licensing, and support.</p>
+<div class="rule"></div>
+</div></div><div class="wrap"><nav class="catnav"><a href="#before-buying">&#128722; Before You Buy</a><a href="#purchasing">&#128179; Purchasing &amp; Access</a><a href="#whats-included">&#128230; What&#x27;s Included</a><a href="#using-product">&#128640; Using Your Purchase</a><a href="#technical">&#128736; Technical &amp; Compatibility</a><a href="#contact">&#128172; Contact &amp; Support</a></nav></div><section class="category" id="before-buying"><div class="wrap">
+<p class="catlabel">&#128722; Before You Buy</p>
+<h2>Before You Buy</h2><div class="catrule"></div>
+<details class="faq"><summary>What exactly am I buying?<span class="chev">&#9660;</span></summary>
+<div class="answer">You are buying a complete Client Experience System for a specific destination series. Each system includes pre-written email templates, pre-built automations, advisor tasks, and a destination workflow, all designed to import directly into Tern. You also receive a branded setup guide (PDF) and access to the online advisor resource guide.</div></details><details class="faq"><summary>What series are available?<span class="chev">&#9660;</span></summary>
+<div class="answer">Four series are currently available: Western Europe (France, Paris, French Riviera, Monaco, Belgium, Netherlands), British Isles (United Kingdom, London, Scotland, Ireland), Mediterranean (Italy, Croatia, Spain, Portugal, Greece), and Hawaii (Oahu, Maui, Kauai, Big Island, Lanai, Multi-Island).</div></details><details class="faq"><summary>Do I need Tern to use this?<span class="chev">&#9660;</span></summary>
+<div class="answer">Yes. The system is built exclusively for Tern. The email templates, automations, and workflows are formatted for Tern&#x27;s import and automation features. They cannot be used in other CRMs without manual recreation.</div></details><details class="faq"><summary>Is this a subscription or a one-time purchase?<span class="chev">&#9660;</span></summary>
+<div class="answer">It is a one-time purchase. You pay once per series and own the content. Annual updates to email content and new templates added to your series are included at no additional cost.</div></details><details class="faq"><summary>Can I buy individual destinations instead of a full series?<span class="chev">&#9660;</span></summary>
+<div class="answer">Series are sold as complete packages. Individual destination workflows are not sold separately because the shared emails (Packing List, Currency, VAT, Entry Requirements) are designed to work across the full series.</div></details><details class="faq"><summary>Do you offer a bundle discount?<span class="chev">&#9660;</span></summary>
+<div class="answer">Check the Booked &amp; Beyond shop for current bundle pricing. Bundles that include multiple series or the full collection are periodically available at a discount.</div></details>
+</div></section><section class="category" id="purchasing"><div class="wrap">
+<p class="catlabel">&#128179; Purchasing &amp; Access</p>
+<h2>Purchasing &amp; Access</h2><div class="catrule"></div>
+<details class="faq"><summary>How do I purchase?<span class="chev">&#9660;</span></summary>
+<div class="answer">Visit the Booked &amp; Beyond shop on Podia, select your series, and complete checkout. You receive instant access to your download and setup guide.</div></details><details class="faq"><summary>What happens after I buy?<span class="chev">&#9660;</span></summary>
+<div class="answer">You receive a confirmation email from Podia with a link to access your purchase. Your downloads include the Tern workflow file, your series setup guide (PDF), and access to the online advisor resource guide. The workflow also appears in your Tern Library under Shared with Me.</div></details><details class="faq"><summary>How do I access my purchase later?<span class="chev">&#9660;</span></summary>
+<div class="answer">Log in to your Podia account at any time to re-download your files. Your purchase does not expire.</div></details><details class="faq"><summary>Can I get a refund?<span class="chev">&#9660;</span></summary>
+<div class="answer">Because the product includes downloadable digital files and immediate access to templates in Tern, refunds are generally not offered once the content has been accessed or downloaded. If you experience a technical issue that prevents you from using the product, reach out to katie@bookedandbeyond.co and we will work with you to resolve it.</div></details><details class="faq"><summary>I did not receive my confirmation email. What should I do?<span class="chev">&#9660;</span></summary>
+<div class="answer">Check your spam or promotions folder first. If it is not there, log in to your Podia account directly to access your purchases. If you still cannot find it, email katie@bookedandbeyond.co with your order details.</div></details>
+</div></section><section class="category" id="whats-included"><div class="wrap">
+<p class="catlabel">&#128230; What&#x27;s Included</p>
+<h2>What&#x27;s Included</h2><div class="catrule"></div>
+<details class="faq"><summary>How many email templates are in each series?<span class="chev">&#9660;</span></summary>
+<div class="answer">It varies by series. Western Europe includes 14 templates, British Isles includes 15+, Mediterranean includes 22+, and Hawaii includes 8. Each template is a complete, ready-to-send email with subject line and body copy.</div></details><details class="faq"><summary>Are the emails generic or destination-specific?<span class="chev">&#9660;</span></summary>
+<div class="answer">Every email is destination-specific. Must See/Do emails cover the sights, food, and experiences unique to each city or region. Currency emails reference the local currency and tipping customs. Packing lists are tailored to the climate and culture. Nothing is generic filler.</div></details><details class="faq"><summary>Do the templates include images or just text?<span class="chev">&#9660;</span></summary>
+<div class="answer">Templates include styled, branded text content ready for Tern&#x27;s email builder. Images and banners can be added in Tern&#x27;s editor when you personalize your copy.</div></details><details class="faq"><summary>What are the advisor tasks?<span class="chev">&#9660;</span></summary>
+<div class="answer">Most workflows include two built-in tasks that appear on your Tern task list after you apply the workflow: one reminds you to schedule the visa or entry-requirement email, and another reminds you to review and activate automation timings. They are simple reminders, not automated emails.</div></details><details class="faq"><summary>Are updates included?<span class="chev">&#9660;</span></summary>
+<div class="answer">Yes. When email content is updated (for example, if a destination&#x27;s entry requirements change or new content is added), the updated templates are pushed to your Tern Library. Annual content refreshes are included with your purchase at no extra cost.</div></details><details class="faq"><summary>Can I see a sample before I buy?<span class="chev">&#9660;</span></summary>
+<div class="answer">The demo packet on the Booked &amp; Beyond website shows a full five-email Iceland sequence as a sample. It illustrates the style, depth, and structure of every destination&#x27;s emails.</div></details>
+</div></section><section class="category" id="using-product"><div class="wrap">
+<p class="catlabel">&#128640; Using Your Purchase</p>
+<h2>Using Your Purchase</h2><div class="catrule"></div>
+<details class="faq"><summary>How do I import the workflow into Tern?<span class="chev">&#9660;</span></summary>
+<div class="answer">Your workflow appears in Tern under Workflows, then Shared with Me. Open the destination folder, click the workflow, and choose Make a Copy to add it to your personal library. From there, apply it to any trip.</div></details><details class="faq"><summary>Can I customize the emails?<span class="chev">&#9660;</span></summary>
+<div class="answer">Yes. Make a Copy of any template in your Tern Library before editing. Rename your copy, make changes (add affiliate links, adjust wording, insert images), and swap it into the workflow using the three-dot menu on the automation. Your edits propagate to every trip using that template.</div></details><details class="faq"><summary>Can I use these emails outside of Tern?<span class="chev">&#9660;</span></summary>
+<div class="answer">The content is yours, so you can reference or adapt the copy for other uses. However, the automations, trigger timings, and workflow structure are built specifically for Tern and would need to be manually recreated in another platform.</div></details><details class="faq"><summary>Can I share my purchase with another advisor?<span class="chev">&#9660;</span></summary>
+<div class="answer">Each purchase is licensed for a single user or agency. Sharing login credentials, forwarding workflow files, or distributing templates to other advisors is not permitted. If a colleague wants to use the system, they need their own purchase.</div></details><details class="faq"><summary>I sell a destination that is not in any series. Can I request one?<span class="chev">&#9660;</span></summary>
+<div class="answer">Yes. Reach out to katie@bookedandbeyond.co with the destination. Booked &amp; Beyond is actively developing new series and destination requests help prioritize what gets built next.</div></details><details class="faq"><summary>How do Amazon affiliate links work with the templates?<span class="chev">&#9660;</span></summary>
+<div class="answer">Three types of emails include placeholder spots for your Amazon Associates links: Inspiration emails (link to your storefront), Must See/Do emails (link to guidebooks), and Packing emails (link to recommended products). Replace the placeholders with your own affiliate links to earn commissions on client purchases. Amazon Associates is free to join.</div></details>
+</div></section><section class="category" id="technical"><div class="wrap">
+<p class="catlabel">&#128736; Technical &amp; Compatibility</p>
+<h2>Technical &amp; Compatibility</h2><div class="catrule"></div>
+<details class="faq"><summary>What CRM is this compatible with?<span class="chev">&#9660;</span></summary>
+<div class="answer">Tern only. The workflows, automations, and templates are formatted for Tern&#x27;s system. They are not compatible with TravelJoy, Traveler&#x27;s Q, or other travel CRMs without manual recreation.</div></details><details class="faq"><summary>Will this work on my phone or tablet?<span class="chev">&#9660;</span></summary>
+<div class="answer">Tern&#x27;s web interface works on any device with a browser. You can review automations and toggle statuses from your phone, though initial setup is easier on a desktop or laptop.</div></details><details class="faq"><summary>What if Tern changes their platform?<span class="chev">&#9660;</span></summary>
+<div class="answer">Booked &amp; Beyond monitors Tern updates and adjusts workflows and templates as needed. If a Tern update affects your system, updated versions are pushed to your library.</div></details><details class="faq"><summary>I am having a technical issue with Tern. Can you help?<span class="chev">&#9660;</span></summary>
+<div class="answer">For issues specific to Tern&#x27;s platform (login, syncing, general CRM questions), contact Tern support directly. For issues with the Booked &amp; Beyond workflows, templates, or automations, reach out to katie@bookedandbeyond.co.</div></details>
+</div></section><section class="category" id="contact"><div class="wrap">
+<p class="catlabel">&#128172; Contact &amp; Support</p>
+<h2>Contact &amp; Support</h2><div class="catrule"></div>
+<details class="faq"><summary>How do I get in touch?<span class="chev">&#9660;</span></summary>
+<div class="answer">Email katie@bookedandbeyond.co. The team typically responds within one business day.</div></details><details class="faq"><summary>Is there a community or group for purchasers?<span class="chev">&#9660;</span></summary>
+<div class="answer">Check bookedandbeyond.com for information on community access, training sessions, and advisor resources. Details vary by purchase and are updated on the website.</div></details><details class="faq"><summary>Do you offer one-on-one setup help?<span class="chev">&#9660;</span></summary>
+<div class="answer">Setup assistance may be available depending on your purchase. Reach out to katie@bookedandbeyond.co to discuss your needs.</div></details>
+</div></section><div class="wrap"><div class="callout">
+<h3>Ready to get started?</h3>
+<p>Visit the <a href="https://bookedandbeyond.com">Booked &amp; Beyond shop</a> to browse destination series, or reach out to <a href="mailto:katie@bookedandbeyond.co">katie@bookedandbeyond.co</a> with any questions.</p>
+</div></div><footer><div class="wrap">
+<span class="amp">&amp;</span>
+<p>Booked &amp; Beyond LLC &middot; <a href="https://bookedandbeyond.com">bookedandbeyond.com</a></p>
+<p>Questions? <a href="mailto:katie@bookedandbeyond.co">katie@bookedandbeyond.co</a></p>
+</div></footer></body></html>
